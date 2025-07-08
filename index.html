@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voltri Electricidad</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 50;
+    }
+  </style>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="bg-[#003366] text-white py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <img src="logo.png">
+      <a href="https://wa.me/2235607281?text=Necesito%20asesoramiento" class="bg-[#FFC300] text-black font-semibold px-4 py-2 rounded hover:bg-yellow-400">Consultas</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-white text-center py-20" style="background:url('bg1.webp');background-position: center;background-repeat: no-repeat;background-size: cover;">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-[#003366] mb-4" style="text-shadow: 2px 2px 5px #bbddff9a">¿Problemas eléctricos en casa?</h2>
+      <p class="text-lg text-gray-700 mb-6" style="text-shadow: 0 0 5px white;">Solucionamos tus urgencias eléctricas en menos de 24 horas.</p>
+      <a href="#contacto" class="bg-[#FFC300] text-black font-bold px-6 py-3 rounded hover:bg-yellow-400">¡Solicitá tu reparación ahora!</a>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+    <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+        <h3 class="text-3xl font-bold text-center text-[#003366] mb-10">Nuestros Servicios</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <a href="https://wa.me/2235607281?text=Hola,%20necesito%20información%20sobre%20instalaciones%20electricas"
+            class="bg-white p-6 rounded shadow hover:bg-yellow-100 active:bg-yellow-300 transition-colors block">
+            <h4 class="text-xl font-bold mb-2">Instalaciones</h4>
+            <p>Montaje seguro y profesional de sistemas eléctricos domiciliarios.</p>
+        </a>
+
+        <a href="https://wa.me/2235607281?text=Hola,%20necesito%20ayuda%20con%20una%20reparacione%20urgente"
+            class="bg-white p-6 rounded shadow hover:bg-yellow-100 active:bg-yellow-300 transition-colors block">
+            <h4 class="text-xl font-bold mb-2">Reparaciones urgentes</h4>
+            <p>Atención rápida ante cortes, cortocircuitos y emergencias.</p>
+        </a>
+
+        <a href="https://wa.me/2235607281?text=Hola,%20necesito%20más%20información%20sobre%20verificacion%20de%20seguridad%20de%20mi%20tablero"
+            class="bg-white p-6 rounded shadow hover:bg-yellow-100 active:bg-yellow-300 transition-colors block">
+            <h4 class="text-xl font-bold mb-2">Tableros y disyuntores</h4>
+            <p>Modernización y reparación de sistemas de protección eléctrica.</p>
+        </a>
+
+        <a href="https://wa.me/2235607281?text=Hola,%20necesito%20más%20información%20sobre:%20Certificados%20eléctricos"
+            class="bg-white p-6 rounded shadow hover:bg-yellow-100 active:bg-yellow-300 transition-colors block">
+            <h4 class="text-xl font-bold mb-2">Certificados eléctricos</h4>
+            <p>Emitimos certificados para obras, alquileres y habilitaciones. (Ponele...)</p>
+        </a>
+
+        </div>
+    </div>
+    </section>
+
+
+  <!-- Sobre nosotros -->
+  <section class="bg-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold text-[#003366] mb-6">¿Quiénes somos?</h3>
+      <p class="text-gray-700 max-w-2xl mx-auto">
+        Con más de 15 años de experiencia, en Voltri Electricidad ofrecemos soluciones eléctricas rápidas, confiables y seguras para hogares y comercios.
+        (aca hay que poner lo que se quiera de descripcion... lo que refleje a voltri... caballos)
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#003366] text-white py-12">
+    <div class="container mx-auto px-4 text-center">
+      <h4 class="text-2xl font-bold mb-4">¿Necesitás ayuda ya mismo?</h4>
+      <a href="tel:2235607281" class="bg-[#FFC300] text-black font-bold px-6 py-3 rounded hover:bg-yellow-400">	&#9990; Llamanos al 223-5607281</a>
+      
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4 max-w-xl">
+      <h3 class="text-2xl font-bold text-center text-[#003366] mb-6">Contacto</h3>
+      <form class="bg-white p-6 rounded shadow space-y-4">
+        <input type="text" placeholder="Nombre" class="w-full border border-gray-300 p-3 rounded" />
+        <input type="email" placeholder="Email" class="w-full border border-gray-300 p-3 rounded" />
+        <textarea placeholder="Mensaje" rows="5" class="w-full border border-gray-300 p-3 rounded"></textarea>
+        <button class="bg-[#003366] text-white font-bold px-6 py-3 rounded hover:bg-blue-800">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+   <a href="https://wa.me/2235607281?text=Vengo%20del%20sitio%20web%20y%20quisier%20informacion" class="whatsapp-button" target="_blank">
+    
+    <img src="whatsapp_PNG21.png" alt="WhatsApp" class="w-16 h-16 hover:scale-110 transition-transform" />
+  </a>
+
+  <!-- Footer -->
+  <footer class="bg-[#003366] text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2025 Voltri Electricidad · Mar del Plata, Argentina</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -100,7 +100,7 @@
         <strong>Voltri Electricidad está para acompañarte.</strong></p>
 
       <!-- video celulares -->
-      <div class="relative w-full h-[750px] md:hidden overflow-hidden">
+      <div id="galeria_movil" class="relative w-full h-[750px] md:hidden overflow-hidden">
         <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
           <source src="trabajo.mp4" type="video/mp4" />
           Tu navegador no soporta video HTML5.
@@ -202,10 +202,11 @@
   const continuity = document.getElementById('continuity')
   let isPlaying = false;
   sound.volume = 0.1;
-
+  
   function handleTouch(e) {
+    const enGaleria = e.target.closest('#galeria_movil') !== null; //esto para que el multimetro no moleste la galeria
     const touches = e.touches.length;
-    if (touches === 2 && !isPlaying) {
+    if (touches === 2 && !isPlaying && !enGaleria) {
       // Mostrar imagen y reproducir sonido
       img.style.display = 'block';
       continuity.innerHTML = "Desarrollado por Jose Gomez"
@@ -244,7 +245,7 @@
       }
     });
   }, {
-    threshold: 0.6 // se vuelve opaco si el 60% del elemento está visible
+    threshold: 0.8 // se vuelve opaco si el 80% del elemento está visible
   });
 
   document.querySelectorAll('.fade-on-scroll').forEach(img => {

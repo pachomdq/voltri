@@ -16,6 +16,15 @@
     }
   </style>
 <body class="bg-gray-100 text-gray-800">
+  <!-- pantalla de carga-->
+  <div id="preloader" class="fixed inset-0 bg-white flex items-center justify-center z-[9999]">
+    <div class="relative w-20 h-20">
+      <!-- spinner -->
+      <div class="absolute inset-0 animate-spin rounded-full border-4 border-t-[#003366] border-gray-200"></div>
+      <!-- icono en el centro -->
+      <img src="favicon.png" class="absolute inset-0 m-auto w-10 h-10" alt="Logo" />
+    </div>
+  </div>
   <!-- Header -->
   <header class="bg-[#003366] text-white py-4">
     <div class="container mx-auto flex justify-between items-center px-4">
@@ -177,6 +186,16 @@
   <audio id="cont-sound" src="cont.mp3" loop></audio>
 
   <script>
+    window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.style.opacity = '0';
+      preloader.style.transition = 'opacity 0.5s ease';
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 500); // coincide con la transición
+    }
+  });
 
   const img = document.getElementById('cont-image');
   const sound = document.getElementById('cont-sound');
@@ -195,6 +214,7 @@
         isPlaying = true;
       }).catch(err => {
         img.style.display = 'none';
+        continuity.innerHTML = "";
         console.log("Reproducción bloqueada por el navegador:", err);
       });
 

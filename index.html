@@ -10,7 +10,7 @@
 <style>
     .whatsapp-button {
       position: fixed;
-      bottom: 20px;
+      bottom: 80px;
       right: 20px;
       z-index: 50;
     }
@@ -165,10 +165,54 @@
   <footer class="bg-[#003366] text-white py-6">
     <div class="container mx-auto px-4 text-center">
       <p>© 2025 Voltri Electricidad · Mar del Plata, Argentina</p>
+      <p id="continuity"></p>
     </div>
   </footer>
 
+  <img id="cont-image" src="cont.png" 
+      style="position:fixed; top:50%; left:50%; transform:translate(-50%, -50%);
+              width:150px; height:auto; display:none; z-index:1000;" alt="Continuidad" />
+
+  <!-- Audio oculto -->
+  <audio id="cont-sound" src="cont.mp3" loop></audio>
+
   <script>
+
+  const img = document.getElementById('cont-image');
+  const sound = document.getElementById('cont-sound');
+  const continuity = document.getElementById('continuity')
+  let isPlaying = false;
+  sound.volume = 0.1;
+
+  function handleTouch(e) {
+    const touches = e.touches.length;
+    if (touches === 2 && !isPlaying) {
+      // Mostrar imagen y reproducir sonido
+      img.style.display = 'block';
+      continuity.innerHTML = "Desarrollado por Jose Gomez"
+      sound.currentTime = 0;
+      sound.play().then(() => {
+        isPlaying = true;
+      }).catch(err => {
+        img.style.display = 'none';
+        console.log("Reproducción bloqueada por el navegador:", err);
+      });
+
+    } else if (touches < 2 && isPlaying) {
+      // Ocultar imagen y pausar sonido
+      img.style.display = 'none';
+      sound.pause();
+      isPlaying = false;
+      continuity.innerHTML = ""
+    }
+  }
+
+  window.addEventListener('touchstart', handleTouch, { passive: true });
+  window.addEventListener('touchend', handleTouch, { passive: true });
+  window.addEventListener('touchcancel', handleTouch, { passive: true });
+
+
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {

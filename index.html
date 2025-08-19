@@ -1,54 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Electricista en Mar del Plata | Voltri Electricidad</title>
-  <meta name="description" content="Voltri Electricidad ofrece servicios eléctricos en Mar del Plata, Santa Clara del Mar y Miramar. Instalaciones, reparaciones y mantenimiento eléctrico con garantía.">
-  <meta name="robots" content="index, follow">
+<title>Electricista en Mar del Plata | Voltri Electricidad</title>
+<meta name="description" content="Voltri Electricidad ofrece servicios eléctricos en Mar del Plata, Santa Clara del Mar y Miramar. Instalaciones, reparaciones y mantenimiento eléctrico con garantía.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.voltri.com.ar/">
 
-  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
-  <meta property="og:title" content="Voltri Electricidad - Electricista en Mar del Plata">
-  <meta property="og:description" content="Servicios eléctricos en Mar del Plata, Santa Clara del Mar y Miramar. Instalaciones, reparaciones y mantenimiento eléctrico con garantía.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.voltri.com.ar/">
-  <meta property="og:image" content="https://www.voltri.com.ar/logo.png">
+<!-- Open Graph -->
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Voltri Electricidad - Electricista en Mar del Plata">
+<meta property="og:description" content="Servicios eléctricos en Mar del Plata, Santa Clara del Mar y Miramar. Instalaciones, reparaciones y mantenimiento eléctrico con garantía.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.voltri.com.ar/">
+<meta property="og:image" content="https://www.voltri.com.ar/og-image.jpg">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Voltri Electricidad - Electricista en Mar del Plata">
-  <meta name="twitter:description" content="Servicios eléctricos en Mar del Plata, Santa Clara del Mar y Miramar.">
-  <meta name="twitter:image" content="https://www.voltri.com.ar/logo.png">
-  <link rel="icon" type="image/x-icon" href="favicon.png" />
-   <!-- Datos estructurados JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Electrician",
-    "name": "Voltri Electricidad",
-    "url": "https://www.voltri.com.ar",
-    "telephone": "+54-223-5603575",
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Mar del Plata"
-      },
-      {
-        "@type": "City",
-        "name": "Santa Clara del Mar"
-      },
-      {
-        "@type": "City",
-        "name": "Miramar"
-      }
-    ],
-    "logo": "https://www.voltri.com.ar/logo.png"
-  }
-  </script>
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Voltri Electricidad - Electricista en Mar del Plata">
+<meta name="twitter:description" content="Servicios eléctricos en Mar del Plata, Santa Clara del Mar y Miramar.">
+<meta name="twitter:image" content="https://www.voltri.com.ar/og-image.jpg">
+
+<link rel="icon" type="image/x-icon" href="favicon.png" />
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "Voltri Electricidad",
+  "url": "https://www.voltri.com.ar",
+  "telephone": "+54-223-5603575",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Mar del Plata",
+    "addressRegion": "Buenos Aires",
+    "addressCountry": "AR"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Mar del Plata"},
+    {"@type": "City", "name": "Santa Clara del Mar"},
+    {"@type": "City", "name": "Miramar"}
+  ],
+  "logo": "https://www.voltri.com.ar/logo.png",
+  "openingHours": "Mo-Su 00:00-23:59"
+}
+</script>
 
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <style>
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
     .whatsapp-button {
       position: fixed;
       bottom: 80px;
@@ -70,6 +83,7 @@
   <header class="bg-[#000000] text-white py-4">
     <div class="container mx-auto flex justify-between items-center px-4">
       <img src="logo.png">
+      <h1 class="visually-hidden">Electricista en Mar del Plata - Voltri Electricidad</h1>
       <a href="https://wa.me/2235607281?text=Necesito%20asesoramiento" class="bg-[#FFC300] text-black font-semibold px-4 py-2 rounded hover:bg-yellow-400">Consultas</a>
     </div>
   </header>
